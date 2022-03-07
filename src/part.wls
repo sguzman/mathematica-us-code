@@ -6,5 +6,5 @@ Cases[
     {__, "identifier" -> identifier_}, {
       XMLElement["num", {"value" -> value_}, __],
       XMLElement["heading", __, {text_}]
-  , __}] -> {identifier, value, text}
+  , __}] -> {Splice@StringSplit[identifier, "/"], value, text}
 , \[Infinity]]&

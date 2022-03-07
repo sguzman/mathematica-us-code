@@ -5,5 +5,5 @@ Cases[
   XMLElement["subsection",
     {__, "identifier" -> identifier_}, {
       XMLElement["num", {"value" -> value_}, __],
-  __}] -> {identifier, value}
+  __}] -> {Splice@StringSplit[identifier, "/"], value}
 , \[Infinity]]&

@@ -1,10 +1,10 @@
-#!/usr/bin/env wolframscript
+#!/usr/local/Wolfram/Mathematica/13.0/Executables/wolframscript -function -signature String
 
-Print[First /@ Tally@
-  Cases[
-  ImportString[$ScriptInputString,"XML"],
-   XMLElement[tag_,
-     {__, "identifier" -> identifier_},
-     __] -> tag
-   , \[Infinity]]
-]
+First /@
+Tally@
+Cases[
+  Import[#,"XML"],
+  XMLElement[tag_,
+    {__, "identifier" -> identifier_},
+  __] -> tag
+, \[Infinity]]&

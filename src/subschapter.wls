@@ -2,9 +2,9 @@
 
 Cases[
   Import[#,"XML"],
-  XMLElement["title",
+  XMLElement["subchapter",
     {__, "identifier" -> identifier_}, {
       XMLElement["num", {"value" -> value_}, __],
       XMLElement["heading", __, {text_}]
-  , __}] -> {Splice@StringSplit[identifier, "/"], value, text}
+  , __}] -> {identifier, value, text}
 , \[Infinity]]&

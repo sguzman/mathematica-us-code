@@ -2,7 +2,7 @@
 
 Cases[
   Import[#,"XML"],
-  XMLElement["title",
+  XMLElement["chapter",
     {__, "identifier" -> identifier_}, {
       XMLElement["num", {"value" -> value_}, __],
       XMLElement["heading", __, {text_}]
